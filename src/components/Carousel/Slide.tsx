@@ -3,16 +3,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Box, Flex, Text } from "@chakra-ui/react";
+import { SlideProps } from "../../types/Slides";
 
-interface SlideProps {
-  slideData: {
-    title: string;
-    subtitle: string;
-    src: string;
-  };
+interface SlideObjProps {
+  slideData: SlideProps;
 }
 
-export function Slide({ slideData }: SlideProps) {
+export function Slide({ slideData }: SlideObjProps) {
   return (
     <Flex
       bgImage={`url('${slideData.src}')`}
@@ -27,7 +24,7 @@ export function Slide({ slideData }: SlideProps) {
         w="100%"
         h="100%"
         pos="absolute"
-        bg="rgba(0,0,0,0.4)"
+        bg="rgba(0,0,0,0.25)"
         direction="column"
         align="center"
         justify="center"

@@ -4,16 +4,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Slide } from "./Slide";
-
-const continents = [
-  {
-    title: "Europa",
-    subtitle: "O continente mais antigo",
-    src: "https://bigseventravel.com/wp-content/uploads/2019/01/patrick-tomasso-40308-unsplash-1920x1440.jpg",
-  },
-];
+import { useContinents } from "../../useContinents";
 
 export function Carousel() {
+  const { continents } = useContinents();
+
   return (
     <Swiper
       className="mySwiper"
@@ -22,12 +17,13 @@ export function Carousel() {
       pagination
       modules={[Pagination, Navigation]}
     >
-      <SwiperSlide>
-        <Slide slideData={continents[0]} />
-      </SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
+      {continents.map((continent) => {
+        return (
+          <SwiperSlide key={continent.id}>
+            <Slide slideData={continent} />
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 }

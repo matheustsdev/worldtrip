@@ -3,11 +3,14 @@ import { theme } from "../../styles/theme";
 import { AppProps } from "next/app";
 
 import "/styles/global.css";
+import { ContinentsProvider } from "../useContinents";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
+      <ContinentsProvider>
+        <Component {...pageProps} />
+      </ContinentsProvider>
     </ChakraProvider>
   );
 }

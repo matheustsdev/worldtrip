@@ -1,8 +1,8 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import { CitiesProps } from "../../types/Cards100";
 
 interface ResponseProps {
+  continent: string | string[];
   quantity: number;
   cities: CitiesProps[];
 }
@@ -18,7 +18,7 @@ export default function handler(
       country: "China",
       flag: "https://flagcdn.com/w320/cn.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "2",
@@ -26,7 +26,7 @@ export default function handler(
       country: "Tailândia",
       flag: "https://flagcdn.com/w320/th.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "3",
@@ -42,7 +42,7 @@ export default function handler(
       country: "China",
       flag: "https://flagcdn.com/w320/cn.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "5",
@@ -50,7 +50,7 @@ export default function handler(
       country: "Singapura",
       flag: "https://flagcdn.com/w320/sg.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "6",
@@ -66,7 +66,7 @@ export default function handler(
       country: "Emirados Árabes",
       flag: "https://flagcdn.com/w320/ae.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "8",
@@ -79,10 +79,10 @@ export default function handler(
     {
       id: "9",
       name: "Kuala Lumpur",
-      country: "MalAsia",
+      country: "MalÁsia",
       flag: "https://flagcdn.com/w320/my.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "10",
@@ -98,7 +98,7 @@ export default function handler(
       country: "India",
       flag: "https://flagcdn.com/w320/in.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "12",
@@ -114,7 +114,7 @@ export default function handler(
       country: "China",
       flag: "https://flagcdn.com/w320/cn.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "14",
@@ -122,7 +122,7 @@ export default function handler(
       country: "India",
       flag: "https://flagcdn.com/w320/in.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "15",
@@ -130,7 +130,7 @@ export default function handler(
       country: "Tailândia",
       flag: "https://flagcdn.com/w320/th.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "16",
@@ -146,7 +146,7 @@ export default function handler(
       country: "Japão",
       flag: "https://flagcdn.com/w320/jp.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "18",
@@ -154,7 +154,7 @@ export default function handler(
       country: "Tailândia",
       flag: "https://flagcdn.com/w320/th.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "19",
@@ -162,7 +162,7 @@ export default function handler(
       country: "China",
       flag: "https://flagcdn.com/w320/cn.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "20",
@@ -170,7 +170,7 @@ export default function handler(
       country: "Arábia Saudita",
       flag: "https://flagcdn.com/w320/ae.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "21",
@@ -178,7 +178,7 @@ export default function handler(
       country: "China",
       flag: "https://flagcdn.com/w320/cn.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "22",
@@ -194,7 +194,7 @@ export default function handler(
       country: "Arábia Saudita",
       flag: "https://flagcdn.com/w320/ae.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "24",
@@ -202,7 +202,7 @@ export default function handler(
       country: "Coreia do Sul",
       flag: "https://flagcdn.com/w320/kr.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "25",
@@ -218,7 +218,7 @@ export default function handler(
       country: "India",
       flag: "https://flagcdn.com/w320/in.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "27",
@@ -234,7 +234,7 @@ export default function handler(
       country: "Japão",
       flag: "https://flagcdn.com/w320/jp.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "29",
@@ -250,7 +250,7 @@ export default function handler(
       country: "China",
       flag: "https://flagcdn.com/w320/cn.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "31",
@@ -258,7 +258,7 @@ export default function handler(
       country: "Vietnã",
       flag: "https://flagcdn.com/w320/vn.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "32",
@@ -266,7 +266,7 @@ export default function handler(
       country: "Indonesia",
       flag: "https://flagcdn.com/w320/id.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "33",
@@ -298,7 +298,7 @@ export default function handler(
       country: "India",
       flag: "https://flagcdn.com/w320/in.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "37",
@@ -311,10 +311,10 @@ export default function handler(
     {
       id: "38",
       name: "Johor Bahru",
-      country: "MalAsia",
+      country: "MalÁsia",
       flag: "https://flagcdn.com/w320/my.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "39",
@@ -322,7 +322,7 @@ export default function handler(
       country: "India",
       flag: "https://flagcdn.com/w320/in.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "40",
@@ -370,7 +370,7 @@ export default function handler(
       country: "Russia",
       flag: "https://flagcdn.com/w320/ru.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "46",
@@ -394,7 +394,7 @@ export default function handler(
       country: "Vietnã",
       flag: "https://flagcdn.com/w320/vn.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "49",
@@ -402,7 +402,7 @@ export default function handler(
       country: "Arábia Saudita",
       flag: "https://flagcdn.com/w320/ae.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "50",
@@ -426,7 +426,7 @@ export default function handler(
       country: "Vietnã",
       flag: "https://flagcdn.com/w320/vn.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "53",
@@ -466,7 +466,7 @@ export default function handler(
       country: "Indonesia",
       flag: "https://flagcdn.com/w320/id.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "58",
@@ -474,7 +474,7 @@ export default function handler(
       country: "China",
       flag: "https://flagcdn.com/w320/cn.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "59",
@@ -482,7 +482,7 @@ export default function handler(
       country: "Russia",
       flag: "https://flagcdn.com/w320/ru.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "60",
@@ -498,7 +498,7 @@ export default function handler(
       country: "Israel",
       flag: "https://flagcdn.com/w320/il.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "62",
@@ -522,15 +522,15 @@ export default function handler(
       country: "Arábia Saudita",
       flag: "https://flagcdn.com/w320/ae.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "65",
       name: "Ilha de Penang",
-      country: "MalAsia",
+      country: "MalÁsia",
       flag: "https://flagcdn.com/w320/my.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "66",
@@ -546,7 +546,7 @@ export default function handler(
       country: "Japão",
       flag: "https://flagcdn.com/w320/jp.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "68",
@@ -554,7 +554,7 @@ export default function handler(
       country: "China",
       flag: "https://flagcdn.com/w320/cn.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "69",
@@ -570,7 +570,7 @@ export default function handler(
       country: "Tailândia",
       flag: "https://flagcdn.com/w320/th.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "71",
@@ -618,7 +618,7 @@ export default function handler(
       country: "India",
       flag: "https://flagcdn.com/w320/in.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "77",
@@ -626,7 +626,7 @@ export default function handler(
       country: "Filipinas",
       flag: "https://flagcdn.com/w320/ph.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "78",
@@ -642,7 +642,7 @@ export default function handler(
       country: "Israel",
       flag: "https://flagcdn.com/w320/il.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "80",
@@ -650,7 +650,7 @@ export default function handler(
       country: "China",
       flag: "https://flagcdn.com/w320/cn.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "81",
@@ -698,7 +698,7 @@ export default function handler(
       country: "Japão",
       flag: "https://flagcdn.com/w320/jp.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "87",
@@ -730,7 +730,7 @@ export default function handler(
       country: "Vietnã",
       flag: "https://flagcdn.com/w320/vn.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "91",
@@ -738,7 +738,7 @@ export default function handler(
       country: "Indonesia",
       flag: "https://flagcdn.com/w320/id.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "92",
@@ -754,7 +754,7 @@ export default function handler(
       country: "Japão",
       flag: "https://flagcdn.com/w320/jp.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "94",
@@ -762,7 +762,7 @@ export default function handler(
       country: "Emirados Árabes",
       flag: "https://flagcdn.com/w320/ae.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "95",
@@ -770,7 +770,7 @@ export default function handler(
       country: "Coreia do Sul",
       flag: "https://flagcdn.com/w320/kr.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "96",
@@ -802,7 +802,7 @@ export default function handler(
       country: "Tailândia",
       flag: "https://flagcdn.com/w320/th.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
     {
       id: "100",
@@ -810,17 +810,18 @@ export default function handler(
       country: "India",
       flag: "https://flagcdn.com/w320/in.png",
       city_img: "",
-      continent: "Asia",
+      continent: "Ásia",
     },
   ];
 
+  const continent: string | string[] = req.query.continent;
+
   const response: CitiesProps[] = data.filter((city) => {
-    return city.continent.toLowerCase() == req.query.continent;
+    return city.continent.toLowerCase() == continent;
   });
 
-  console.log(req.query.continent);
-
   res.status(200).json({
+    continent,
     quantity: response.length,
     cities: response,
   });

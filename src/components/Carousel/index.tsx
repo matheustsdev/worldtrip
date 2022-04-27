@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Slide } from "./Slide";
-import { useContinents } from "../../useContinents";
+import { useContinents } from "../../hooks/useContinents";
 
 export function Carousel() {
   const { continents } = useContinents();

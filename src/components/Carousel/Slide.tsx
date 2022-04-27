@@ -3,13 +3,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { SlideProps } from "../../types/Slides";
+import { ContinentProps } from "../../types/Slides";
+import { useRouter } from "next/router";
 
 interface SlideObjProps {
-  slideData: SlideProps;
+  slideData: ContinentProps;
 }
 
 export function Slide({ slideData }: SlideObjProps) {
+  const router = useRouter();
+
   return (
     <Flex
       bgImage={`url('${slideData.src}')`}
@@ -29,8 +32,24 @@ export function Slide({ slideData }: SlideObjProps) {
         align="center"
         justify="center"
       >
-        <Text fontSize="3rem">{slideData.title}</Text>
-        <Text fontSize="1.5rem">{slideData.subtitle}</Text>
+        <Text
+          fontSize="3rem"
+          cursor="pointer"
+          onClick={() =>
+            router.push(`/continents/${slideData.title.toLowerCase()}`)
+          }
+        >
+          {slideData.title}
+        </Text>
+        <Text
+          fontSize="1.5rem"
+          cursor="pointer"
+          onClick={() =>
+            router.push(`/continents/${slideData.title.toLowerCase()}`)
+          }
+        >
+          {slideData.subtitle}
+        </Text>
       </Flex>
     </Flex>
   );

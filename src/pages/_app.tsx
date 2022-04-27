@@ -3,7 +3,7 @@ import { theme } from "../../styles/theme";
 import { AppProps } from "next/app";
 
 import "/styles/global.css";
-import { ContinentsProvider } from "../useContinents";
+import { ContinentsProvider } from "../hooks/useContinents";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

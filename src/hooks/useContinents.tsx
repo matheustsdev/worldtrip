@@ -5,11 +5,11 @@ import {
   useEffect,
   useState,
 } from "react";
-import { api } from "./services/api";
-import { SlideProps } from "./types/Slides";
+import { api } from "../services/api";
+import { ContinentProps } from "../types/Slides";
 
 interface ContinentsContextProps {
-  continents: SlideProps[];
+  continents: ContinentProps[];
 }
 
 interface ContinentsProviderProps {
@@ -21,11 +21,11 @@ const continentsContext = createContext<ContinentsContextProps>(
 );
 
 export function ContinentsProvider({ children }: ContinentsProviderProps) {
-  const [continents, setContinents] = useState<SlideProps[]>([]);
+  const [continents, setContinents] = useState<ContinentProps[]>([]);
 
   useEffect(() => {
     api
-      .get<SlideProps[]>("continents")
+      .get<ContinentProps[]>("continents")
       .then((res) => {
         setContinents(res.data);
         return res.data;

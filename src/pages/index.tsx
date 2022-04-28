@@ -6,27 +6,35 @@ import { TravelTypes } from "../components/TravelTypes";
 
 export default function Home() {
   return (
-    <Flex direction="column" align="center" justify="center">
+    <Flex
+      direction="column"
+      align="center"
+      justify="center"
+      overflow={"hidden"}
+    >
       <Header />
       <Hero />
-      <Box w="100%">
-        <TravelTypes />
-      </Box>
-      <Divider border="2px solid" borderColor="dark.text" w="90px" my="20" />
+      <TravelTypes />
+      <Divider
+        border={["1px solid", "2px solid"]}
+        borderColor="dark.text"
+        w="90px"
+        my={["9", "20"]}
+      />
       <Text
         textAlign="center"
-        fontSize="2.25rem"
-        lineHeight="54px"
+        fontSize={["1.25rem", "2.25rem"]}
+        lineHeight={["30px", "54px"]}
         fontWeight="medium"
         color="dark.text"
-        mb="50px"
+        mb={["1.25rem", "50px"]}
       >
         Vamos nessa?
         <br />
         Então escolha seu continente
       </Text>
       <Carousel />
-      <Box mb="10" />
+      <Box mb={["6", "10"]} />
     </Flex>
   );
 }

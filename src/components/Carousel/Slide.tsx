@@ -33,7 +33,7 @@ export function Slide({ slideData }: SlideObjProps) {
         justify="center"
       >
         <Text
-          fontSize="3rem"
+          fontSize={["1.5rem", "3rem"]}
           cursor="pointer"
           onClick={() =>
             router.push(`/continents/${slideData.title.toLowerCase()}`)
@@ -42,7 +42,7 @@ export function Slide({ slideData }: SlideObjProps) {
           {slideData.title}
         </Text>
         <Text
-          fontSize="1.5rem"
+          fontSize={["0.875rem", "1.5rem"]}
           cursor="pointer"
           onClick={() =>
             router.push(`/continents/${slideData.title.toLowerCase()}`)

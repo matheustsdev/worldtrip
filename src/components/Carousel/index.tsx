@@ -5,14 +5,19 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Slide } from "./Slide";
 import { useContinents } from "../../hooks/useContinents";
+import { useBreakpointValue } from "@chakra-ui/react";
 
 export function Carousel() {
   const { continents } = useContinents();
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  });
 
   return (
     <Swiper
       className="mySwiper"
-      style={{ backgroundColor: "#fff", height: 450, width: "100%" }}
+      style={{ height: isWideVersion ? 450 : 250, width: "100%" }}
       navigation
       pagination
       modules={[Pagination, Navigation]}

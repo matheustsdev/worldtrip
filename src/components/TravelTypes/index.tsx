@@ -1,10 +1,21 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Flex, Icon, Image, Text, useBreakpointValue } from "@chakra-ui/react";
+import { GoPrimitiveDot } from "react-icons/go";
+import { DottedTypes } from "./DottedTypes";
 
 export function TravelTypes() {
-  return (
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  });
+
+  return isWideVersion ? (
     <Flex px="140px" align="center" justify="space-between">
-      <Flex direction="column" align="center" justify="center">
-        <Image src="/cocktail.png" alt="Coquetel" />
+      <Flex direction={["row", "column"]} align="center" justify="center">
+        {isWideVersion ? (
+          <Image src="/cocktail.png" alt="Coquetel" />
+        ) : (
+          <Icon as={GoPrimitiveDot} color="highlight" />
+        )}
         <Text fontSize="1.5rem" fontWeight="semibold" color="dark.text">
           vida noturna
         </Text>
@@ -34,5 +45,7 @@ export function TravelTypes() {
         </Text>
       </Flex>
     </Flex>
+  ) : (
+    <DottedTypes />
   );
 }

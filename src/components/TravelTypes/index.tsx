@@ -9,7 +9,7 @@ export function TravelTypes() {
   });
 
   return isWideVersion ? (
-    <Flex px="140px" align="center" justify="space-between">
+    <Flex px="140px" w="100%" align="center" justify="space-between">
       <Flex direction={["row", "column"]} align="center" justify="center">
         {isWideVersion ? (
           <Image src="/cocktail.png" alt="Coquetel" />

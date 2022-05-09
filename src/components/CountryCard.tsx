@@ -29,6 +29,7 @@ export function CountryCard({ city }: CardProps) {
         w="100%"
         justify="space-between"
         align="center"
+        fontFamily="Barlow"
       >
         <Flex direction="column" h="4rem" justify="space-between">
           <Text fontSize="1.25rem" color="dark.text" fontWeight="semibold">

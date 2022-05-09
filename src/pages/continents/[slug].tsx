@@ -27,14 +27,23 @@ export default function Continent({ cities, continent }: ContinentPageProps) {
       <ContinentHero continent={continent} />
       <Flex
         as="main"
-        px="80px"
-        pb="40px"
+        px={["16px", "80px"]}
+        pb={["16px", "40px"]}
         color="dark.text"
         w="100%"
         direction="column"
       >
-        <Flex py="80px" justify="space-between" w="100%">
-          <Text w="600px" textAlign="justify">
+        <Flex
+          py={["24px", "80px"]}
+          justify="space-between"
+          w="100%"
+          flexDir={["column", "row"]}
+        >
+          <Text
+            w={["100%", "600px"]}
+            textAlign="justify"
+            fontSize={["0.875rem", "1.5rem"]}
+          >
             {continent.description}
           </Text>
           <ContinentsInfo
@@ -44,14 +53,19 @@ export default function Continent({ cities, continent }: ContinentPageProps) {
           />
         </Flex>
         <Text
-          fontSize="2.25rem"
+          fontSize={["1.5rem", "2.25rem"]}
           color="dark.text"
           fontWeight="medium"
-          mb="40px"
+          mb={["20px", "40px"]}
         >
           Cidades +100
         </Text>
-        <Grid templateColumns="repeat(4, 256px)" gap="45px">
+        <Grid
+          templateColumns={["repeat(1, 256px)", "repeat(4, 256px)"]}
+          gap={["20px", "45px"]}
+          margin="0 auto"
+          paddingBottom={["2.5rem", "1.5rem"]}
+        >
           {cities.cities.map((city) => {
             return (
               <GridItem key={city.id}>

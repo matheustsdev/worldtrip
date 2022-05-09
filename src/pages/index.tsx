@@ -34,7 +34,7 @@ export default function Home() {
         Então escolha seu continente
       </Text>
       <Carousel />
-      <Box mb={["6", "10"]} />
+      <Box mb={["16", "10"]} />
     </Flex>
   );
 }

@@ -14,7 +14,7 @@ export function ContinentsInfo({
   starredCities,
 }: InfoProps) {
   return (
-    <Flex align="center" justify="space-between" w="500px">
+    <Flex align="center" justify="space-between" w={["343px", "500px"]}>
       <UniqueInfo quantity={countries}>países</UniqueInfo>
       <UniqueInfo quantity={languages}>línguas</UniqueInfo>
       <UniqueInfo quantity={starredCities} tooltip>

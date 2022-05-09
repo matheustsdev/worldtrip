@@ -9,20 +9,21 @@ export function ContinentHero({ continent }: HeroProps) {
   return (
     <Flex
       w="100%"
-      h="500px"
+      h={["150px", "500px"]}
       bgImage={`url('${continent.src}')`}
-      bgPosition="bottom"
+      bgPosition={["center", "bottom"]}
       bgRepeat="no-repeat"
+      bgSize="cover"
     >
       <Flex
-        px="140px"
-        py="60px"
+        px={["136px", "140px"]}
+        py={["56px", "60px"]}
         align="end"
         w="100%"
         h="100%"
         bg="rgba(0,0,0,0.25)"
       >
-        <Text fontSize="3rem" fontWeight="semibold">
+        <Text fontSize={["1.75rem", "3rem"]} fontWeight="semibold">
           {continent.title}
         </Text>
       </Flex>

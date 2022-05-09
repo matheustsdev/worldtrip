@@ -13,15 +13,22 @@ export function UniqueInfo({ children, quantity, tooltip = false }: InfoProps) {
       direction="column"
       h="100px"
       minW="100px"
-      fontWeight="semibold"
       align="center"
       justify="center"
     >
-      <Text fontSize="3rem" color="highlight">
+      <Text
+        fontSize={["1.5rem", "3rem"]}
+        color="highlight"
+        fontWeight="semibold"
+      >
         {quantity}
       </Text>
       <Flex align="center">
-        <Text fontSize="1.5rem" color="dark.text">
+        <Text
+          fontSize={["1.125rem", "1.5rem"]}
+          color="dark.text"
+          fontWeight={["regular", "semibold"]}
+        >
           {children}
         </Text>
         {tooltip && (
@@ -35,7 +42,7 @@ export function UniqueInfo({ children, quantity, tooltip = false }: InfoProps) {
           >
             <Flex
               as="span"
-              fontSize="1rem"
+              fontSize={["0.5rem", "1rem"]}
               pl="5px"
               align="center"
               justify="center"

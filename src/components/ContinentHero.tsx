@@ -23,7 +23,11 @@ export function ContinentHero({ continent }: HeroProps) {
         h="100%"
         bg="rgba(0,0,0,0.25)"
       >
-        <Text fontSize={["1.75rem", "3rem"]} fontWeight="semibold">
+        <Text
+          fontSize={["1.75rem", "3rem"]}
+          fontWeight="semibold"
+          textAlign="center"
+        >
           {continent.title}
         </Text>
       </Flex>

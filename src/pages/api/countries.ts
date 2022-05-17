@@ -689,7 +689,8 @@ export default function handler(
       name: "Buenos Aires",
       country: "Argentina",
       flag: "https://flagcdn.com/w320/ar.png",
-      city_img: "",
+      city_img:
+        "https://veja.abril.com.br/wp-content/uploads/2020/05/gettyimages-1218824829.jpg.jpg",
       continent: "America do Sul",
     },
     {
@@ -721,7 +722,8 @@ export default function handler(
       name: "Lima",
       country: "Peru",
       flag: "https://flagcdn.com/w320/pe.png",
-      city_img: "",
+      city_img:
+        "https://www.peru.travel/Contenido/Atractivo/Imagen/pt/218/1.1/Principal/shutterstock_682350013.jpg",
       continent: "America do Sul",
     },
     {
@@ -793,7 +795,8 @@ export default function handler(
       name: "Rio de Janeiro",
       country: "Brasil",
       flag: "https://flagcdn.com/w320/br.png",
-      city_img: "",
+      city_img:
+        "https://freewalkertours.com/wp-content/uploads/mariano-diaz-7F65HDP0-E0-unsplash-1100x733.jpg",
       continent: "America do Sul",
     },
     {

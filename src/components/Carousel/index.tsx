@@ -1,8 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import { Slide } from "./Slide";
 import { useContinents } from "../../hooks/useContinents";
 import { useBreakpointValue } from "@chakra-ui/react";

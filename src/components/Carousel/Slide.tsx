@@ -1,7 +1,3 @@
-import { SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { ContinentProps } from "../../types/Slides";
 import { useRouter } from "next/router";

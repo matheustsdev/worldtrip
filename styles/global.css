@@ -1,3 +1,7 @@
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/navigation";
+
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: #FFBA08;
     opacity: 1;
